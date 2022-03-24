@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import "../styles/login.scss";
-=======
-import React from 'react'
 
->>>>>>> master
 const login = () => {
   return (
 

@@ -39,3 +39,5 @@ npm i mini-css-extract-plugin
 despues importamos las propiedades de react-router-dom en nuestro archivo APP.jsx
 
 `import {BrowserRouter, Route, Routes} from 'react-router-dom'` 
+
+-elementos como botones o inputs deben ser componentes, para que los containers puedan reutilizarlos al máximo. Además de que así solo escribiremos sus estilos una vez.
