@@ -41,3 +41,27 @@ despues importamos las propiedades de react-router-dom en nuestro archivo APP.js
 `import {BrowserRouter, Route, Routes} from 'react-router-dom'` 
 
 -elementos como botones o inputs deben ser componentes, para que los containers puedan reutilizarlos al máximo. Además de que así solo escribiremos sus estilos una vez.
+
+**configuracion de las rutas de los archivos por medio de webpack**
+
+- primero ubicamos la sección resolve en modules, en nuestro archivo webpack.config.js:
+
+`resolve: {
+		extensions: ['.js', '.jsx'],
+	},`
+
+- procedemos a agregar las rutas para acceder de una forma mas ordenada a las carpetas cuando importemos un elemento: 
+
+`
+resolve: {
+		extensions: ['.js', '.jsx'],
+	},`
+    	alias:{
+			'@components':path.resolve(__dirname, 'src/components/'),
+			'@containers':path.resolve(__dirname, 'src/containers/'),
+			'@styles':path.resolve(__dirname, 'src/styles/'),
+			'@icons':path.resolve(__dirname, 'src/assets/icons/'),
+			'@logos':path.resolve(__dirname,'src/assets/logos/')
+			
+		},
+`
