@@ -55,7 +55,7 @@ despues importamos las propiedades de react-router-dom en nuestro archivo APP.js
 `
 resolve: {
 		extensions: ['.js', '.jsx'],
-	},`
+	},
     	alias:{
 			'@components':path.resolve(__dirname, 'src/components/'),
 			'@containers':path.resolve(__dirname, 'src/containers/'),
@@ -64,4 +64,20 @@ resolve: {
 			'@logos':path.resolve(__dirname,'src/assets/logos/')
 			
 		},
+`
+
+**configuracion de babel para async y await**
+
+-estas propiedades de javascript podrían tener conflicto con nuestra aplicación react
+para ello de bemos instalar la siguiente dependencia.
+`
+npm install @babel/plugin-transform-runtime
+`
+
+cuando esté instalado procedemos a configurar nuestro archivo .babelrc agregando el plugin 
+
+`
+  "plugins": [
+        "@babel/plugin-transform-runtime"
+    ]
 `
